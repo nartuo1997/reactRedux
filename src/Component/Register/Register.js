@@ -7,7 +7,7 @@ const Register = () => {
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
     const [addr, setAddr] = React.useState("");
-    const [zip, setZip] = React.useState(0);
+    const [zip, setZip] = React.useState();
     const [submit, setSubmit] = React.useState(true)
 
 
@@ -45,7 +45,7 @@ const Register = () => {
                     <Form.Group as={Col} controlId="formGridPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control onChange={e => setPassword(e.target.value)}
-                            vvalue={password} type="password"
+                            value={password} type="password"
                             placeholder="Password"
                             required />
                     </Form.Group>
@@ -62,7 +62,7 @@ const Register = () => {
                 <Form.Group className="mb-3" controlId="formGridAddress2">
                     <Form.Label>Address 2</Form.Label>
                     <Form.Control onChange={e => setZip(e.target.value)}
-                        value={zip} placeholder="Apartment, studio, or floor"
+                        placeholder="Apartment, studio, or floor"
                         required />
                 </Form.Group>
 
